@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link to="/graph" class="text-black hover:text-blue-700">
               Graph
             </Link>
-            <Link to="/stocks" class="text-black hover:text-blue-700">
+            <Link to="/contact" class="text-black hover:text-blue-700">
               Contacts
             </Link>
             <a

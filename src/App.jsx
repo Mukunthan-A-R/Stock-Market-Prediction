@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "../routes/Home";
 import Stocks from "../routes/Stocks";
 import Graph from "../routes/Graph";
+import Contact from "../routes/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/stocks" element={<Stocks />} />
           <Route path="/graph" element={<Graph />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
