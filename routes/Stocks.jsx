@@ -1,6 +1,7 @@
 import React from "react";
 import TradingViewWidget from "../components/TradingViewWidget";
 import NiftyStocks from "../components/NiftyStocks";
+import StockTable from "../components/StockTable";
 
 const Stocks = () => {
   return (
@@ -24,6 +25,7 @@ const Stocks = () => {
           <TradingViewWidget />
         </section>
       </main>
+      <StockTable></StockTable>
 
       <main className="container mx-auto py-16 px-6">
         <section className="bg-gray-900 p-8 rounded-lg shadow-lg">

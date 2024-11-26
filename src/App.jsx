@@ -8,6 +8,7 @@ import Home from "../routes/Home";
 import Stocks from "../routes/Stocks";
 import Graph from "../routes/Graph";
 import Contact from "../routes/Contact";
+import Portfolio from "../routes/Portfolio";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/stocks" element={<Stocks />} />
           <Route path="/graph" element={<Graph />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/user" element={<Portfolio />} />
         </Routes>
       </div>
     </Router>
