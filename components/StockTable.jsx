@@ -17,7 +17,7 @@ const StockTable = () => {
     "AMZN", // Amazon
     "MSFT", // Microsoft
     "TSLA", // Tesla
-    "FB", // Meta (formerly Facebook)
+    // "FB", // Meta (formerly Facebook)
     "NFLX", // Netflix
     "NVDA", // NVIDIA
     "MSM", // MetLife
