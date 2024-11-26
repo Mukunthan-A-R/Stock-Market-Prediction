@@ -19,6 +19,12 @@ const Navbar = () => {
             <Link to="/graph" class="text-black hover:text-blue-700">
               Graph
             </Link>
+            <Link to="/trans" class="text-black hover:text-blue-700">
+              History
+            </Link>
+            <Link to="/payment" class="text-black hover:text-blue-700">
+              Buy
+            </Link>
             <Link to="/contact" class="text-black hover:text-blue-700">
               Contacts
             </Link>

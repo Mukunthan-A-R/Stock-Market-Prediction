@@ -9,6 +9,7 @@ import Stocks from "../routes/Stocks";
 import Graph from "../routes/Graph";
 import Contact from "../routes/Contact";
 import Portfolio from "../routes/Portfolio";
+import Payment from "../routes/Payment";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="/stocks" element={<Stocks />} />
           <Route path="/graph" element={<Graph />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/user" element={<Portfolio />} />
+          <Route path="/trans" element={<Portfolio />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </div>
     </Router>
