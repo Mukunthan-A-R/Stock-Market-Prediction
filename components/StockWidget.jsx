@@ -13,6 +13,18 @@ function StockWidget() {
     { symbol: "TSLA", name: "Tesla" },
     { symbol: "AMZN", name: "Amazon" },
     { symbol: "IBM", name: "IBM" },
+    { symbol: "TCS", name: "Tata Consultancy Services" }, // TCS
+    { symbol: "RELIANCE", name: "Reliance Industries" }, // Reliance Industries
+    { symbol: "INFY", name: "Infosys" }, // Infosys
+    { symbol: "HDFC", name: "HDFC Bank" }, // HDFC Bank
+    { symbol: "ICICIBANK", name: "ICICI Bank" }, // ICICI Bank
+    { symbol: "HINDUNILVR", name: "Hindustan Unilever" }, // Hindustan Unilever
+    { symbol: "BHARTIARTL", name: "Bharti Airtel" }, // Bharti Airtel
+    { symbol: "WIPRO", name: "Wipro" }, // Wipro
+    { symbol: "LTC", name: "Larsen & Toubro" }, // Larsen & Toubro
+    { symbol: "MARUTI", name: "Maruti Suzuki" }, // Maruti Suzuki
+    { symbol: "ADANIGREEN", name: "Adani Green Energy" }, // Adani Green Energy
+    { symbol: "SAIL", name: "Steel Authority of India" }, // Steel Authority of India
   ];
 
   const handleSymbolChange = (e) => {
@@ -21,7 +33,7 @@ function StockWidget() {
   };
 
   return (
-    <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+    <div className="bg-gray-900 p-8 rounded-lg shadow-lg w-full sm:w-[800px] md:w-[1000px] mx-auto">
       <div className="mb-6">
         <h2 className="text-2xl text-white font-semibold mb-4">
           Select a Stock

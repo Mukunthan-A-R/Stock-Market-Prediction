@@ -4,14 +4,17 @@ function StockFetcher({ symbol }) {
   const container = useRef();
 
   useEffect(() => {
-    // Remove existing script if it exists
+    // Clean up any previous widget before creating a new one
     container.current.innerHTML = "";
 
+    // Create a new script element for TradingView widget
     const script = document.createElement("script");
     script.src =
       "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
     script.type = "text/javascript";
     script.async = true;
+
+    // Setting widget options dynamically based on the selected symbol
     script.innerHTML = `
       {
         "symbols": [
@@ -19,7 +22,7 @@ function StockFetcher({ symbol }) {
         ],
         "chartOnly": false,
         "width": "100%",
-        "height": "500", // Adjust height as needed
+        "height": "500", 
         "locale": "en",
         "colorTheme": "light",
         "autosize": true,
@@ -52,9 +55,11 @@ function StockFetcher({ symbol }) {
         ]
       }
     `;
+
+    // Append the script to the container to render the TradingView widget
     container.current.appendChild(script);
 
-    // Cleanup function to remove the widget when component unmounts or symbol changes
+    // Cleanup function: This will run before the effect runs again (e.g., when the symbol changes)
     return () => {
       container.current.innerHTML = "";
     };
@@ -62,19 +67,10 @@ function StockFetcher({ symbol }) {
 
   return (
     <div
-      className="tradingview-widget-container w-full p-4 bg-gray-800 rounded-lg shadow-lg"
+      className="tradingview-widget-container max-w-full p-4 bg-gray-800 rounded-lg shadow-lg"
       ref={container}
     >
-      {/* <div className="tradingview-widget-container__widget"></div> */}
-      <div className="tradingview-widget-copyright">
-        <a
-          href="https://www.tradingview.com/"
-          rel="noopener nofollow"
-          target="_blank"
-        >
-          {/* <span className="blue-text">Track all markets on TradingView</span> */}
-        </a>
-      </div>
+      {/* Widget content will be injected here by the TradingView script */}
     </div>
   );
 }
